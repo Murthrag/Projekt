@@ -20,7 +20,7 @@ public class Rental {
     
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)    
-    private int id;
+    private Long id;
     
     @NotNull
     @Column(nullable = false, unique = false)
@@ -39,14 +39,14 @@ public class Rental {
     public Rental() {
     }
 
-    public Rental(int id, Date rentalDate, Customer customer, Machine machine) {
+    public Rental(Long id, Date rentalDate, Customer customer, Machine machine) {
         this.id = id;
         this.rentalDate = rentalDate;
         this.customer = customer;
         this.machine = machine;
     }
     
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
